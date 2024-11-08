@@ -71,10 +71,16 @@ class LeaderboardPage:
                 <tbody>"""
   
     def leaderboard_row(self, position, name, points):
-        return "<tr><th>" + str(position) + "</th><td>" + str(name) +  "</td><td>" + str(points) + "</td></tr>"
+        return "\n" + \
+            "\t" * 5 + "<tr>" + "\n" + \
+            "\t" * 5 + "\t" + "<th>" + str(position) + "</th>" + "\n" + \
+            "\t" * 5 + "\t" + "<td>" + str(name) +  "</td>" + "\n" + \
+            "\t" * 5 + "\t" + "<td>" + str(points) + "</td>" + "\n" + \
+            "\t" * 5 + "</tr>"
 
     def body_closing(self):
-        return """</tbody>
+        return """
+            </tbody>
             </table>
         </div>
         <div class="column content">
